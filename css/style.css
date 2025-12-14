@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+  /* Offset for fixed header */
+}
+
 :root {
   --bg-primary: linear-gradient(113.49deg, #984D38 -14.93%, #181E41 58.12%);
   --text-main: white;
@@ -33,6 +39,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background: var(--bg-primary);
   color: var(--text-main);
+  min-height: 100vh;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -418,42 +425,189 @@ nav a.active {
   display: block;
 }
 
-footer {
+/* Contact Section (Replaces Footer) */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  padding: 60px 40px;
+  background: transparent;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.contact-container {
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+  gap: 80px;
+  justify-content: space-between;
+}
+
+/* Left Column */
+.contact-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 500px;
+}
+
+.contact-left h2 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-main);
+  margin-bottom: 10px;
+}
+
+.contact-left .highlight {
+  background: linear-gradient(214.02deg, #EA5F5F 6.04%, #EEAA55 92.95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-left p {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.email-block {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.email-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #EA5F5F;
+  /* Orange border */
+  color: #EA5F5F;
+  /* Orange icon */
+}
+
+.email-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-info span {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.email-info a {
+  font-size: 18px;
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.connect-block {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.connect-block span {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* Freelance Badge */
+.freelance-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  border: 1px solid var(--border-color);
+  width: fit-content;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.freelance-badge .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #2ecc71;
+  border-radius: 50%;
+}
+
+/* Right Column (Form) */
+.contact-right {
+  flex: 1;
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 30px;
+  border: 1px solid var(--border-color);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form label {
+  color: var(--text-main);
+  font-size: 14px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  justify-content: center;
-  align-items: center;
-  margin: 0px auto;
-  width: 500px;
+  font-weight: 600;
 }
 
-.G-1 {
-  width: 60px;
-  height: 60px;
+.contact-form input,
+.contact-form textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 15px 20px;
+  color: var(--text-main);
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #EA5F5F;
+}
+
+.contact-form button {
   background: linear-gradient(214.02deg, #EA5F5F 6.04%, #EEAA55 92.95%);
-  border-radius: 35px;
-  align-items: center;
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
-  font-size: 25px;
+  align-items: center;
+  gap: 10px;
+  transition: opacity 0.3s;
 }
 
-footer .f-h {
-  font-size: 50px;
-  font-weight: 700;
-  line-height: 75px;
-  letter-spacing: 0.30000001192092896px;
-}
-
-footer .f-p {
-  font-family: Poppins;
-  font-size: 17px;
-  font-weight: 500;
-  line-height: 36px;
-  letter-spacing: 0.30000001192092896px;
-  text-align: center;
-  color: var(--text-muted);
+.contact-form button:hover {
+  opacity: 0.9;
 }
 
 .social-icons {
@@ -465,25 +619,50 @@ footer .f-p {
 .social-icons a {
   width: 45px;
   height: 45px;
-  background: var(--social-bg);
+  background: rgba(255, 255, 255, 0.05);
   text-align: center;
   display: flex;
   align-items: center;
-  border-radius: 25px;
   justify-content: center;
+  border-radius: 50%;
+  color: var(--text-muted);
+  font-size: 20px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: 1px solid var(--border-color);
 }
 
-.ho1:hover {
-  border: 3px solid #e56b6b;
-  background: transparent;
+.social-icons a:hover {
+  background: white;
+  /* Light background to make colors pop? Or just transform */
+  transform: translateY(-3px);
 }
 
-.ho2:hover {
-  background: linear-gradient(214.02deg, #EA5F5F 6.04%, #EEAA55 92.95%);
+/* Brand Colors on Hover */
+.social-icons a.linkedin:hover {
+  color: #0077b5;
+  border-color: #0077b5;
 }
 
-.ho3:hover {
-  /* color: #e7a982; Removed to let layout hover take precedence or keep white */
+.social-icons a.dribbble:hover {
+  color: #ea4c89;
+  border-color: #ea4c89;
+}
+
+.social-icons a.medium:hover {
+  color: #000000;
+  border-color: #000000;
+}
+
+/* For dark mode, medium might need white or specific brand styling. */
+body:not(.light-mode) .social-icons a.medium:hover {
+  color: white;
+  border-color: white;
+}
+
+.social-icons a.behance:hover {
+  color: #1769ff;
+  border-color: #1769ff;
 }
 
 
@@ -494,6 +673,20 @@ footer .f-p {
     flex-direction: column;
     gap: 20px;
     padding: 10px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact-section {
+    padding: 20px;
+    margin-top: 60px;
+  }
+
+  .contact-left h2 {
+    font-size: 32px;
   }
 
   .hero {

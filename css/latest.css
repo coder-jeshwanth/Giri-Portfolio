@@ -7,14 +7,16 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background:  linear-gradient(95deg, #984D38 -30.3%, #181E41 58.12%);
-    color: white;
+    background: var(--bg-primary);
+    color: var(--text-main);
 }
 
 .intro-page {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 80px;
+    padding-top: 220px;
+    /* Adjusted for fixed header */
+    margin-top: 0;
 }
 
 .intro {
@@ -38,7 +40,7 @@ body {
     gap: 10px;
 }
 
- h2 {
+h2 {
     font-size: 32px;
     font-weight: bold;
 }
@@ -206,163 +208,198 @@ p {
     flex-direction: column;
     gap: 5px;
 }
-.user-flow .uf-head{
+
+.user-flow .uf-head {
     margin-left: 100px;
 }
+
 .user-flow {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
+
 /* .user-flow .uf-head h2{
     font-size: 32px;
     font-weight: bold;
 } */
-.user-flow .uf-head p{
+.user-flow .uf-head p {
     font-size: 14px;
 }
-.uf-diagram{
+
+.uf-diagram {
     display: flex;
 }
-.uf-diagram .flow-chat{
+
+.uf-diagram .flow-chat {
     position: absolute;
     width: 1250px;
     left: 100px;
 }
-.wireframes{
+
+.wireframes {
     display: flex;
     flex-direction: column;
     gap: 50px;
     margin: 100px 0px 0px 100px;
 }
+
 /* .wireframes .wf-sec1 h2{
     font-size: 32px;
     font-weight: bold;
 } */
-.wireframes .wf-sec1 p{
+.wireframes .wf-sec1 p {
     font-size: 14px;
 }
-.wf-sec2{
+
+.wf-sec2 {
     display: flex;
     position: relative;
 }
-.wf-sec2 .wf-temp{
+
+.wf-sec2 .wf-temp {
     display: flex;
     flex-direction: column;
-    
+
 }
-.wf-imgs{
+
+.wf-imgs {
     display: flex;
     position: absolute;
     gap: 20px;
     left: 30px;
     top: 30px;
 }
-.wf-imgs .wf-img-2-3{
+
+.wf-imgs .wf-img-2-3 {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.img-7{
+
+.img-7 {
     width: 1000px;
 }
-.wf-sec2 .wf-perfume{
+
+.wf-sec2 .wf-perfume {
     position: absolute;
     width: 420px;
     height: 560px;
     left: 930px;
     top: 180px;
 }
-.wf-sec2 .wf-1-4{
+
+.wf-sec2 .wf-1-4 {
     width: 300px;
     height: 500px;
     margin-top: 130px;
 }
-.wf-sec2 .wf-2{
+
+.wf-sec2 .wf-2 {
     width: 300px;
     height: 270px;
 }
-.wf-sec2 .wf-3{
+
+.wf-sec2 .wf-3 {
     width: 290px;
     height: 370px;
 }
-.design-sys{
+
+.design-sys {
     display: flex;
     flex-direction: column;
     margin: 100px 0px 0px 100px;
 }
-.color-design-sys{
+
+.color-design-sys {
     display: flex;
     gap: 140px;
 }
-.color-palette{
+
+.color-palette {
     display: flex;
-    flex-direction:  column;
+    flex-direction: column;
 }
-.color-palette h4{
+
+.color-palette h4 {
     font-weight: 400;
     font-size: 14px;
     margin: 15px 0px 15px 0px;
 }
-.colors{
+
+.colors {
     display: flex;
     gap: 20px;
 }
-.colors img{
+
+.colors img {
     width: 150px;
 }
-.design-sys{
+
+.design-sys {
     display: flex;
 }
-.d-sys-ele{
+
+.d-sys-ele {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.d-sys-ele img{
+
+.d-sys-ele img {
     width: 700px;
 }
-.typography{
+
+.typography {
     display: flex;
     flex-direction: column;
     margin-left: 100px;
 }
-.fonts{
+
+.fonts {
     display: flex;
     margin-top: 80px;
     gap: 40px;
 }
-.fonts img{
+
+.fonts img {
     width: 250px;
 }
-.mockups{
+
+.mockups {
     display: flex;
     flex-direction: column;
     gap: 50px;
     margin-top: 200px;
     position: relative;
 }
-.mockups h2{
+
+.mockups h2 {
     margin-left: 100px;
 }
-.mockups-imgs{
+
+.mockups-imgs {
     display: flex;
     gap: 0px;
     margin-left: 20px;
 }
-.mockups-imgs img{
+
+.mockups-imgs img {
     width: 740px;
 }
-.mockups-imgs .m-2{
+
+.mockups-imgs .m-2 {
     position: absolute;
     top: 460px;
     left: 390px;
 }
-.mockups-imgs .m-2{
+
+.mockups-imgs .m-2 {
     width: 800px;
 }
-.thank-you{
+
+.thank-you {
     margin: 600px 50px 100px 0px;
     text-align: center;
     font-size: 100px;

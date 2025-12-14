@@ -137,23 +137,54 @@ nav a.active {
   /* Ensure active stays visible */
 }
 
-/* .contact-btn styling replaced by .theme-btn */
-.theme-btn {
-  background: transparent;
-  border: 2px solid var(--border-color);
-  color: var(--text-main);
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
+/* Toggle Switch Styles */
+.theme-toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.theme-btn:hover {
+.theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--border-color);
+  transition: 0.3s;
+  border-radius: 30px;
+  border: 2px solid var(--border-color);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 2px;
+  bottom: 2px;
+  background: linear-gradient(214.02deg, #EA5F5F 6.04%, #EEAA55 92.95%);
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background: var(--hover-bg);
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+.slider:hover {
   background: var(--hover-bg);
 }
 
@@ -211,6 +242,12 @@ nav a.active {
 
 .hero-img img {
   height: 560px;
+  transition: filter 0.3s ease;
+}
+
+.hero-img img:hover {
+  filter:
+    drop-shadow(0 0 15px rgba(234, 95, 95, 0.5)) drop-shadow(0 0 30px rgba(238, 170, 85, 0.3)) drop-shadow(0 0 45px rgba(238, 170, 85, 0.2));
 }
 
 .hero-img span {
@@ -338,6 +375,11 @@ nav a.active {
 .service img {
   width: 40px;
   height: 40px;
+  filter: brightness(0) invert(1);
+}
+
+body.light-mode .service img {
+  filter: brightness(0);
 }
 
 .service h3 {
@@ -423,6 +465,78 @@ nav a.active {
   height: auto;
   border-radius: 15px;
   display: block;
+}
+
+/* Portfolio Grid Layout */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+}
+
+.portfolio-card {
+  background: var(--card-bg);
+  border: none;
+  /* Removed border */
+  border-radius: 20px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.portfolio-card:hover {
+  /* Spread glow effect with multiple layers */
+  box-shadow:
+    0 0 20px rgba(234, 95, 95, 0.7),
+    0 0 40px rgba(238, 170, 85, 0.5),
+    0 0 60px rgba(238, 170, 85, 0.3);
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-card-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.portfolio-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.portfolio-card p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 24px;
+}
+
+/* Responsive for Portfolio */
+@media (max-width: 900px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Contact Section (Replaces Footer) */

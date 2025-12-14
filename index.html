@@ -24,10 +24,13 @@
     <nav>
       <a href="#home" class="ho3 active">Home</a>
       <a href="#services" class="ho3">Services</a>
-      <a href="latest.html" class="ho3">Portfolio</a>
+      <a href="portfolio.html" class="ho3">Portfolio</a>
       <a href="contact.html" class="ho3">Contact</a>
     </nav>
-    <button id="theme-toggle" class="theme-btn"><i class="fas fa-sun"></i></button>
+    <label class="theme-toggle">
+      <input type="checkbox" id="theme-switch">
+      <span class="slider"></span>
+    </label>
   </div>
 </header>
 
@@ -42,7 +45,7 @@
           interfaces that focus on usability and accessibility, while exploring innovative solutions to create
           meaningful digital experiences.
         </p>
-        <a href="#" class="cta">Let’s Talk →</a>
+        <a href="contact.html" class="cta">Let's Talk →</a>
       </div>
       <div class="hero-img">
         <img src="img/giri-pic.png" alt="Giri's Profile Picture" />
@@ -99,20 +102,28 @@
   </section>
 
   <section class="portfolio">
-    <h2>Latest Portfolio</h2>
-    <div class="portfolio-p">
-      <div class="portfolio-content">
-        <h3>Perfume Website Portfolio</h3>
-        <p>
-          This elegant and visually captivating perfume website showcases a curated selection of
-          fragrances, designed with a focus on aesthetics and user experience. Featuring a clean layout and intuitive
-          navigation, users can easily explore product details, filter by scent notes, and make informed purchases. The
-          site embodies a luxurious feel, inviting visitors to immerse themselves in the world of fragrances while
-          ensuring a seamless shopping experience.
-        </p>
+    <h2>Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <img src="img/cover.jpg" alt="Project 1">
+        <div class="portfolio-card-content">
+          <h3>Creative Design</h3>
+          <p>Modern interface design with intuitive user navigation.</p>
+        </div>
       </div>
-      <div class="portfolio-img">
-        <a href="latest.html"><img src="img/latest-portfolio.png" alt="Portfolio Preview"></a>
+      <div class="portfolio-card">
+        <img src="img/gym-cover.png" alt="Project 2">
+        <div class="portfolio-card-content">
+          <h3>Fitness Platform</h3>
+          <p>Dynamic gym website featuring workout tracking features.</p>
+        </div>
+      </div>
+      <div class="portfolio-card">
+        <img src="img/latest-portfolio-img/img-1.png" alt="Project 3">
+        <div class="portfolio-card-content">
+          <h3>Perfume Website</h3>
+          <p>Elegant fragrance showcase with seamless shopping experience.</p>
+        </div>
       </div>
     </div>
   </section>

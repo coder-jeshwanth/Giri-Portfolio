@@ -1,15 +1,6 @@
-const themeToggle = document.getElementById('theme-toggle');
-const themeIcon = themeToggle.querySelector('i');
+const themeSwitch = document.getElementById('theme-switch');
 const body = document.body;
 
-themeToggle.addEventListener('click', () => {
+themeSwitch.addEventListener('change', () => {
   body.classList.toggle('light-mode');
-  
-  if (body.classList.contains('light-mode')) {
-    themeIcon.classList.remove('fa-sun');
-    themeIcon.classList.add('fa-moon');
-  } else {
-    themeIcon.classList.remove('fa-moon');
-    themeIcon.classList.add('fa-sun');
-  }
 });

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Giri S</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">Portfolio</div>
+        <div class="header-right">
+            <nav>
+                <a href="index.html#home" class="ho3">Home</a>
+                <a href="index.html#services" class="ho3">Services</a>
+                <a href="portfolio.html" class="ho3 active">Portfolio</a>
+                <a href="contact.html" class="ho3">Contact</a>
+            </nav>
+            <label class="theme-toggle">
+                <input type="checkbox" id="theme-switch">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
+
+    <section class="featured-projects">
+        <div class="featured-header">
+            <h1>Featured <span class="gradient-text">Projects</span></h1>
+            <p class="subtitle">A curated selection of my recent work across web, mobile, and brand design</p>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="uiux">UI/UX</button>
+            <button class="filter-btn" data-filter="case-study">Case Study</button>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card large" data-category="uiux">
+                <div class="project-image">
+                    <img src="img/gym-cover.png" alt="Future Fitness Website">
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <span class="category-tag">UI/UX</span>
+                            <h3>Future Fitness Website</h3>
+                            <p>Revolutionary fitness platform with personalized workout plans</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="case-study">
+                <div class="project-image">
+                    <img src="img/cover.jpg" alt="Notes Taking AI App">
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <span class="category-tag">Case Study</span>
+                            <h3>Notes Taking - AI Powered App</h3>
+                            <p>Smart note-taking app with AI-driven organization</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="uiux">
+                <div class="project-image">
+                    <img src="img/latest-portfolio-img/img-1.png" alt="B&W Perfume Website">
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <span class="category-tag">UI/UX</span>
+                            <h3>B&W Perfume Website</h3>
+                            <p>Elegant fragrance showcase with immersive shopping experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+    <script src="js/portfolio.js"></script>
+</body>
+
+</html>

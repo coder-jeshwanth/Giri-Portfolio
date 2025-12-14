@@ -6,8 +6,8 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 120px;
-  /* Offset for fixed header */
+  scroll-padding-top: 50px;
+  /* Offset for fixed header - increased for better visibility */
 }
 
 :root {
@@ -124,6 +124,10 @@ nav a::after {
   border-radius: 2px;
 }
 
+nav a:hover::after {
+  width: 100%;
+}
+
 nav a.active::after {
   width: 100%;
 }
@@ -176,11 +180,11 @@ nav a.active {
   border-radius: 50%;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background: var(--hover-bg);
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   transform: translateX(30px);
 }
 
@@ -275,6 +279,11 @@ input:checked + .slider:before {
   margin: 0px 220px;
   display: flex;
   gap: 150px;
+}
+
+body.light-mode .about .about-links img {
+  filter: brightness(0) saturate(100%) invert(35%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(50%) contrast(95%);
+  /* Dark grey filter for light mode visibility */
 }
 
 .about-container {
@@ -473,6 +482,12 @@ body.light-mode .service img {
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   width: 100%;
+}
+
+.portfolio-card-link {
+  text-decoration: none;
+  display: block;
+  color: inherit;
 }
 
 .portfolio-card {

@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background:  linear-gradient(95deg, #984D38 -30.3%, #181E41 58.12%);
+    color: white;
+}
+
+.intro-page {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 80px;
+}
+
+.intro {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.b-w-heading {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.para {
+    font-size: 17px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+ h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.para p {
+    word-spacing: 1px;
+}
+
+.intro-img {
+    width: 600px;
+    height: 750px;
+    background-image: url("/img/latest-portfolio-img/img-1.png");
+    background-size: cover;
+    background-blend-mode: luminosity;
+}
+
+p {
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.key-features {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.key-features ol {
+    margin-left: 145px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.key-features ol li {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.design-page {
+    margin-top: 100px;
+}
+
+.des-sec1 {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.des-sec1 .des-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dis-process {
+    display: flex;
+    gap: 30px;
+    margin-left: 5px;
+
+}
+
+.dis-process .card {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(214.02deg, #EA5F5F 6.04%, #EEAA55 92.95%);
+    border-radius: 15px;
+    box-shadow: 0px 5px 4px 0px #00000040;
+    padding: 30px;
+    color: #FFFFFF80;
+}
+
+.dis-process .card span {
+    font-size: 50px;
+
+}
+
+.dis-process .card h3 {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+
+}
+
+.dis-process .card ul li {
+    font-size: 14.5px;
+    font-weight: 500;
+    line-height: 25px;
+    margin: 20px 0px 0px 20px;
+}
+
+.des-sec2 {
+    display: flex;
+    margin-top: 100px;
+    margin-left: 100px;
+    position: relative;
+}
+
+.temp-hero {
+    width: 500px;
+    position: absolute;
+    bottom: 10px;
+    right: 1030px;
+
+}
+
+.temp-background {
+    width: 1300px;
+}
+
+.temp-bricks {
+    position: absolute;
+    margin-left: 1240px;
+    width: 110px;
+    margin-top: 70px;
+}
+
+.temp-content {
+    position: absolute;
+    left: 450px;
+    color: #000000;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.temp-content p {
+    width: 500px;
+}
+
+.temp-content h3 {
+    font-size: 50px;
+    text-transform: none;
+}
+
+.temp-content h4 {
+    font-weight: 400;
+    font-size: 19px;
+    margin: 5px;
+}
+
+.temp-content h5 {
+    font-weight: 400;
+    font-size: 19px;
+    margin: 5px;
+}
+
+.temp-content p {
+    margin-top: 10px;
+    margin-left: 35px;
+    text-align: justify;
+    line-height: 25px;
+    width: 400px;
+}
+
+.temp-content .goals {
+    margin-top: 10px;
+}
+
+.temp-content ul {
+    margin-left: 32px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.user-flow .uf-head{
+    margin-left: 100px;
+}
+.user-flow {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+/* .user-flow .uf-head h2{
+    font-size: 32px;
+    font-weight: bold;
+} */
+.user-flow .uf-head p{
+    font-size: 14px;
+}
+.uf-diagram{
+    display: flex;
+}
+.uf-diagram .flow-chat{
+    position: absolute;
+    width: 1250px;
+    left: 100px;
+}
+.wireframes{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 100px 0px 0px 100px;
+}
+/* .wireframes .wf-sec1 h2{
+    font-size: 32px;
+    font-weight: bold;
+} */
+.wireframes .wf-sec1 p{
+    font-size: 14px;
+}
+.wf-sec2{
+    display: flex;
+    position: relative;
+}
+.wf-sec2 .wf-temp{
+    display: flex;
+    flex-direction: column;
+    
+}
+.wf-imgs{
+    display: flex;
+    position: absolute;
+    gap: 20px;
+    left: 30px;
+    top: 30px;
+}
+.wf-imgs .wf-img-2-3{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.img-7{
+    width: 1000px;
+}
+.wf-sec2 .wf-perfume{
+    position: absolute;
+    width: 420px;
+    height: 560px;
+    left: 930px;
+    top: 180px;
+}
+.wf-sec2 .wf-1-4{
+    width: 300px;
+    height: 500px;
+    margin-top: 130px;
+}
+.wf-sec2 .wf-2{
+    width: 300px;
+    height: 270px;
+}
+.wf-sec2 .wf-3{
+    width: 290px;
+    height: 370px;
+}
+.design-sys{
+    display: flex;
+    flex-direction: column;
+    margin: 100px 0px 0px 100px;
+}
+.color-design-sys{
+    display: flex;
+    gap: 140px;
+}
+.color-palette{
+    display: flex;
+    flex-direction:  column;
+}
+.color-palette h4{
+    font-weight: 400;
+    font-size: 14px;
+    margin: 15px 0px 15px 0px;
+}
+.colors{
+    display: flex;
+    gap: 20px;
+}
+.colors img{
+    width: 150px;
+}
+.design-sys{
+    display: flex;
+}
+.d-sys-ele{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.d-sys-ele img{
+    width: 700px;
+}
+.typography{
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+.fonts{
+    display: flex;
+    margin-top: 80px;
+    gap: 40px;
+}
+.fonts img{
+    width: 250px;
+}
+.mockups{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 200px;
+    position: relative;
+}
+.mockups h2{
+    margin-left: 100px;
+}
+.mockups-imgs{
+    display: flex;
+    gap: 0px;
+    margin-left: 20px;
+}
+.mockups-imgs img{
+    width: 740px;
+}
+.mockups-imgs .m-2{
+    position: absolute;
+    top: 460px;
+    left: 390px;
+}
+.mockups-imgs .m-2{
+    width: 800px;
+}
+.thank-you{
+    margin: 600px 50px 100px 0px;
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+}

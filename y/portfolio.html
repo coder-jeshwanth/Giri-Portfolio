@@ -32,6 +32,18 @@
                 <input type="checkbox" id="theme-switch">
                 <span class="slider"></span>
             </label>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="index.html#home" class="mobile-nav-link">Home</a>
+            <a href="index.html#services" class="mobile-nav-link">Services</a>
+            <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
         </div>
     </header>
 
@@ -48,7 +60,8 @@
         </div>
 
         <div class="projects-grid">
-            <div class="project-card large" data-category="uiux">
+            <div class="project-card large" data-category="uiux"
+                onclick="location.href='project-detail.html?id=future-fitness'">
                 <div class="project-image">
                     <img src="img/gym-cover.png" alt="Future Fitness Website">
                     <div class="project-overlay">
@@ -61,9 +74,10 @@
                 </div>
             </div>
 
-            <div class="project-card" data-category="case-study">
+            <div class="project-card" data-category="case-study"
+                onclick="location.href='project-detail.html?id=notes-taking'">
                 <div class="project-image">
-                    <img src="img/cover.jpg" alt="Notes Taking AI App">
+                    <img src="img/cover.png" alt="Notes Taking AI App">
                     <div class="project-overlay">
                         <div class="overlay-content">
                             <span class="category-tag">Case Study</span>
@@ -74,7 +88,7 @@
                 </div>
             </div>
 
-            <div class="project-card" data-category="uiux">
+            <div class="project-card" data-category="uiux" onclick="location.href='project-detail.html?id=bw-perfume'">
                 <div class="project-image">
                     <img src="img/latest-portfolio-img/img-1.png" alt="B&W Perfume Website">
                     <div class="project-overlay">
@@ -88,6 +102,11 @@
             </div>
         </div>
     </section>
+
+    <footer class="site-footer">
+        <span class="footer-copyright">© 2025 Portfolio. All rights reserved.</span>
+        <span class="footer-credits">Designed with <span class="footer-highlight">precision & creativity</span></span>
+    </footer>
 
     <script src="js/script.js"></script>
     <script src="js/portfolio.js"></script>

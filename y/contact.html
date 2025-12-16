@@ -31,6 +31,18 @@
                 <input type="checkbox" id="theme-switch">
                 <span class="slider"></span>
             </label>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="index.html#home" class="mobile-nav-link">Home</a>
+            <a href="index.html#services" class="mobile-nav-link">Services</a>
+            <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
         </div>
     </header>
 
@@ -69,15 +81,15 @@
             </div>
 
             <div class="contact-right">
-                <form class="contact-form">
+                <form class="contact-form" id="contactForm">
                     <label>Name
-                        <input type="text" placeholder="Your name">
+                        <input type="text" id="name" placeholder="Your name" required>
                     </label>
                     <label>Email
-                        <input type="email" placeholder="your.email@example.com">
+                        <input type="email" id="email" placeholder="your.email@example.com" required>
                     </label>
                     <label>Message
-                        <textarea placeholder="Tell me about your project..."></textarea>
+                        <textarea id="message" placeholder="Tell me about your project..." required></textarea>
                     </label>
                     <button type="submit">Send Message <i class="fas fa-paper-plane"></i></button>
                 </form>
@@ -85,6 +97,57 @@
         </div>
     </section>
 
+    <footer class="site-footer">
+        <span class="footer-copyright">© 2025 Portfolio. All rights reserved.</span>
+        <span class="footer-credits">Designed with <span class="footer-highlight">precision & creativity</span></span>
+    </footer>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDK9_SidEysWSI6QQ8ttjcCP4A2uV6mZY4",
+            authDomain: "portfolio-71bca.firebaseapp.com",
+            projectId: "portfolio-71bca",
+            storageBucket: "portfolio-71bca.firebasestorage.app",
+            messagingSenderId: "933557924074",
+            appId: "1:933557924074:web:bb35d9f4e49f184ce0e793",
+            measurementId: "G-3BEJZV00WS"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getFirestore(app);
+
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            try {
+                await addDoc(collection(db, 'contacts'), {
+                    name: name,
+                    email: email,
+                    message: message,
+                    timestamp: new Date().toISOString()
+                });
+
+                alert('✅ Message sent successfully! Thank you for reaching out.');
+                document.getElementById('contactForm').reset();
+            } catch (error) {
+                console.error('Error:', error);
+                alert('❌ Failed to send message. Please try again or email directly at giri.s572004@gmail.com');
+            }
+        });
+    </script>
     <script src="js/script.js"></script>
 </body>
 
